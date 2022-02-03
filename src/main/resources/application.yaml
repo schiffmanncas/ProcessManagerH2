@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    #url: jdbc:postgresql://localhost:5432/connector
+    #username: postgres
+    #password: #Pass2020!
+    url: jdbc:h2:file./camunda-h2-default/process-engine;TRACE_LEVEL_FILE=0;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: sa
+  main.allow-bean-definition-overriding: true
+  jpa.hibernate.ddl-auto: update
+
+camunda:
+  bpm:
+    authorization:
+      enabled: true
+server:
+  port: 8091
+#servlet:
+#    context-path: /connector
+
+manager:
+  admin-group: admin
+  admin-username: admin
+  admin-password: admin
+  generic.apiKey: 1234
